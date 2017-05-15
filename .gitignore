@@ -12,3 +12,4 @@ media/*
 
 # PyCharm files
 manage.sublime-workspace
+*.sqlite3
