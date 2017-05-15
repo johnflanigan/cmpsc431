@@ -166,6 +166,8 @@ def browseresults(request):
             '-promo_flag'
         )
 
+    print(item_list)
+
     context_dict = {'items': item_list}
 
     # render
