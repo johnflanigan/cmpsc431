@@ -172,7 +172,7 @@ def browseresults(request):
             '-promo_flag'
         )
 
-    print(item_list)
+    print(item_list.first())
 
     context_dict = {'items': item_list}
 
