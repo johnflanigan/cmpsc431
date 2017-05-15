@@ -124,6 +124,12 @@ def browseresults(request):
     is_breakfast = request.POST.get('is_breakfast')
     is_lunch = request.POST.get('is_lunch')
 
+    print(restaurant_name)
+    print(is_food)
+    print(is_drink)
+    print(is_breakfast)
+    print(is_lunch)
+
     # get food and drink states
     if (is_food and is_drink):
         FOOD = 'FOOD'
