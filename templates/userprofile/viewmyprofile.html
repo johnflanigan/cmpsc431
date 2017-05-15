@@ -17,12 +17,6 @@
 			<th>Level</th>
 			<th><strong>{{ level }}</strong></th>
 		</tr>
-		{% if userprofile.picture %}
-		<tr>
-			<th>Picture</th>
-			<th><img src="{{ MEDIA_URL}}{{ userprofile.picture }}" style="width:40%"/></th>
-		</tr>
-		{% endif %}
 		<tr>
 			<th>Email</th>
 			<th>{{ user.email }}</th>

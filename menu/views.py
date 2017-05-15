@@ -124,25 +124,19 @@ def browseresults(request):
     is_breakfast = request.POST.get('is_breakfast')
     is_lunch = request.POST.get('is_lunch')
 
-    print(restaurant_name)
-    print(is_food)
-    print(is_drink)
-    print(is_breakfast)
-    print(is_lunch)
-
     # get food and drink states
     if (is_food and is_drink):
-        FOOD = 'FOOD'
-        DRINK = 'DRINK'
+        FOOD = 'Food'
+        DRINK = 'Drink'
     elif (is_food):
-        FOOD = 'FOOD'
+        FOOD = 'Food'
         DRINK = -1
     elif (is_drink):
         FOOD = -1
-        DRINK = 'DRINK'
+        DRINK = 'Drink'
     else:
-        FOOD = 'FOOD'
-        DRINK = 'DRINK'
+        FOOD = 'Food'
+        DRINK = 'Drink'
 
     # filter and sort for each case
     if (is_breakfast and is_lunch):
@@ -171,8 +165,6 @@ def browseresults(request):
             Q(food_or_drink=FOOD)|Q(food_or_drink=DRINK)).order_by(
             '-promo_flag'
         )
-
-    print(item_list.first())
 
     context_dict = {'items': item_list}
 
