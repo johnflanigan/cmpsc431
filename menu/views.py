@@ -126,17 +126,17 @@ def browseresults(request):
 
     # get food and drink states
     if (is_food and is_drink):
-        FOOD = 'FOOD'
-        DRINK = 'DRINK'
+        FOOD = 'Food'
+        DRINK = 'Drink'
     elif (is_food):
-        FOOD = 'FOOD'
+        FOOD = 'Food'
         DRINK = -1
     elif (is_drink):
         FOOD = -1
-        DRINK = 'DRINK'
+        DRINK = 'Drink'
     else:
-        FOOD = 'FOOD'
-        DRINK = 'DRINK'
+        FOOD = 'Food'
+        DRINK = 'Drink'
 
     # filter and sort for each case
     if (is_breakfast and is_lunch):

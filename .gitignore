@@ -1,8 +1,3 @@
-# Migrations
-menu/migrations/*
-orders/migrations/*
-userprofile/migrations/*
-
 # Media
 media/*
 
@@ -17,3 +12,4 @@ media/*
 
 # PyCharm files
 manage.sublime-workspace
+*.sqlite3

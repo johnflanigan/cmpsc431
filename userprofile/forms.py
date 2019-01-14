@@ -21,8 +21,8 @@ class UserProfileForm(forms.ModelForm):
     class Meta:
         model = UserProfile
 
-        # only show location, phone number, and picture fields
-        fields = ('location', 'phone_number', 'picture')
+        # only show location and phone number fields
+        fields = ('location', 'phone_number')
 
 class PaymentForm(forms.ModelForm):
     class Meta:

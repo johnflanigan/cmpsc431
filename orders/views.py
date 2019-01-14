@@ -114,13 +114,15 @@ def recipientexchange(request):
 
             # Modify wallets
             transaction.delivers.userprofile.wallet += tip # Add tip to deliverer
+            transaction.delivers.userprofile.save()
+
             transaction.initiates.userprofile.wallet -= tip + price*quantity # Subtract price and tip from requester
+            transaction.initiates.userprofile.save()
+
             transaction.item.supplier.userprofile.wallet += price*quantity # Add price to supplier
+            transaction.item.supplier.userprofile.save()
             
             # Save transaction and updated wallet in database
-            transaction.delivers.userprofile.save()
-            transaction.initiates.userprofile.save()
-            transaction.item.supplier.userprofile.save()
             transaction.save()
             # return success
 

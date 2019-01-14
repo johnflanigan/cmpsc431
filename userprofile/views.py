@@ -45,10 +45,6 @@ def register(request):
             # connect userprofile with user
             profile.user = user
 
-            # if profile picture provided, save it
-            if 'picture' in request.FILES:
-                profile.picture = request.FILES['picture'] 
-
             # save userprofile
             profile.save()
 
